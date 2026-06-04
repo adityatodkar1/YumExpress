@@ -1,7 +1,4 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const resList = [
+export const resList = [
   {
     "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
     info: {
@@ -86,7 +83,7 @@ const resList = [
       areaName: "Talawade",
       costForTwo: "₹250 for two",
       cuisines: ["Chinese", "Asian", "Tibetan", "Desserts"],
-      avgRating: 4.1,
+      avgRating: 3.9,
       parentId: "61955",
       avgRatingString: "4.1",
       totalRatingsString: "4.0K+",
@@ -272,78 +269,3 @@ const resList = [
     widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo",
   },
 ];
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://static.vecteezy.com/system/resources/thumbnails/035/767/491/small/food-logo-silhouette-black-color-illustration-vector.jpg"
-        ></img>
-      </div>
-      <div>
-        <div className="nav-items">
-          <ul>
-            <li>Home</li>
-            <li>About us</li>
-            <li>Conatct us</li>
-            <li>Cart</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-const ResaturantCard = (props) => {
-  const { resData } = props;
-  const { name, cuisines, avgRating, sla } = resData.info;
-  return (
-    <div className="res-card">
-      <img
-        className="res-logo"
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/FOOD_CATALOG/IMAGES/CMS/2024/3/27/1364ea32-80e6-4b37-964a-2f019fd3c51e_69c3766c-1b95-4e60-a51e-172293a52679.png_compressed"
-      ></img>
-      <h3>{name}</h3>
-      <h4>{cuisines.join(",")}</h4>
-      <h5>{avgRating}</h5>
-      <h6>{sla.deliveryTime} Min</h6>
-    </div>
-  );
-};
-
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">Search</div>
-      <div className="res-container">
-        {/* <ResaturantCard resData = {resList[0]}/>
-        <ResaturantCard resData = {resList[1]}/>
-         <ResaturantCard resData = {resList[2]}/> */}
-        {resList.map((restaurant) => {
-          return (
-            <ResaturantCard key={restaurant.info.id} resData={restaurant} />
-          );
-        })}
-      </div>
-    </div>
-  );
-};
-
-const Footer = () => {
-  return <div>Footer</div>;
-};
-
-const AppLayout = () => {
-  return (
-    <div>
-      <Header />
-      <Body />
-      <Footer />
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
