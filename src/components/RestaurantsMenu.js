@@ -10,10 +10,11 @@ const RestaurantsMenu = () => {
   const resMenu = UseRestaurantMenu(resId);
 
   const { name, cuisines, costForTwoMessage } =
-    resMenu?.cards[2]?.card?.card?.info || {};
+    resMenu?.cards[2]?.card?.card?.info || [];
+
   const { itemCards, imageId, description } =
     resMenu?.cards[5]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
-      ?.card || {};
+      ?.card || [];
 
   if (resMenu === null) {
     return <div>Loading....</div>;

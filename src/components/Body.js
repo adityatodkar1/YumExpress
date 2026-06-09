@@ -22,11 +22,11 @@ const Body = () => {
     // console.log(json);
     setListOfRestaurant(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants,
+        ?.restaurants || [],
     );
     setFilterRestaurants(
       json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants,
+        ?.restaurants || [],
     );
   };
 
