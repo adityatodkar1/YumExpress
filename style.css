@@ -350,3 +350,182 @@ body {
   border-radius: 10px;
   flex-shrink: 0;
 }
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .header {
+    padding: 15px 25px;
+  }
+
+  .body {
+    padding: 20px;
+  }
+
+  .restaurantMenu-card {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .menu-item {
+    gap: 20px;
+    padding: 15px;
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+
+  /* Header */
+  .header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  .nav-items {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .nav-items a {
+    font-size: 18px;
+  }
+
+  /* Search */
+  .search {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .flter-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Body */
+  .body {
+    padding: 15px;
+  }
+
+  /* Restaurant Cards */
+  .res-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .res-card {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .res-logo {
+    height: 200px;
+  }
+
+  /* About Page */
+  .About {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .User {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Contact */
+  .Contact {
+    margin: 30px 15px;
+    font-size: 18px;
+  }
+
+  /* Restaurant Menu */
+  .restaurantMenu-card {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .restaurantMenu-card h1 {
+    font-size: 24px;
+  }
+
+  .restaurantMenu-card h2 {
+    font-size: 18px;
+  }
+
+  .restaurantMenu-card h3 {
+    font-size: 16px;
+  }
+
+  /* Menu Item */
+  .menu-item {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .food-image {
+    width: 100%;
+    height: 180px;
+  }
+
+  .item-name {
+    font-size: 18px;
+  }
+
+  .item-price {
+    font-size: 15px;
+  }
+
+  .item-desc {
+    font-size: 13px;
+  }
+}
+
+/* Small Mobile */
+@media screen and (max-width: 480px) {
+
+  .header {
+    padding: 10px;
+  }
+
+  .nav-items {
+    gap: 10px;
+  }
+
+  .nav-items a {
+    font-size: 16px;
+  }
+
+  .restaurantMenu-card h1 {
+    font-size: 20px;
+  }
+
+  .food-image {
+    height: 150px;
+  }
+
+  .item-name {
+    font-size: 16px;
+  }
+
+  .item-desc {
+    -webkit-line-clamp: 3;
+  }
+
+  .flter-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
