@@ -17,7 +17,7 @@ const useRestaurantMenu = () => {
     // );
 
     const data = await fetch(
-      "https://demomenu.onrender.com/api/menu/" + resId );
+      "https://demomenu-zi6h.onrender.com/api/menu/" + resId );
 
     const json = await data.json();
     setResMenu(json.data);
